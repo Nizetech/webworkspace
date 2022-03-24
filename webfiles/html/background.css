@@ -1,0 +1,42 @@
+body{
+    background-color: brown;
+}
+section{
+    width: 70%;
+    height: 450px;
+    background-color: peru;
+    margin: 0 auto;
+    background: center/cover no-repeat url("https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg");
+    /* background-size: contain; */
+    /* background-position: bottom; */
+    /* opacity: 0.2; */
+    
+}
+h1{
+    font-size: 80px;
+    color: white;
+}
+#hover{
+    background: none;
+    color: ghostwhite;
+    border: 2px solid;
+    padding: 1em 2em;
+    font-size: 1em;
+    transition: color 0.25, border-color 0.25, box-shadow 0.25, transform 0.25s, height 0.25s;
+    /* align-items: center; */
+    /* display: flex inline-block; */
+    border-radius: 50em;
+    height: 50px;
+    position: relative;
+    left: 40%;
+    top: 40%;
+    transform: translateY(-100);
+    /* margin: auto 0; */
+}
+#hover:hover{
+    border-color: #f1ff5c;
+    color: white;
+    box-shadow: 0px 0.5px -4px -19px gold;
+    transform: translateY(-0.35em);
+    height: 60;
+}
