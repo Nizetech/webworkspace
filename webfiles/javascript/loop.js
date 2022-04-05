@@ -63,7 +63,7 @@
 
 /// WHILE LOOP ///
 
-// const SECRETES = 'BANANA';
+// const SECRETES = 'BANANA'; 
 
 // let guess = prompt('What is my best fruit?').toUpperCase();
 // while (guess !== SECRETES){
@@ -106,16 +106,52 @@
 //     console.log(`You got it in ${attempts} attempts`);
 // }
 
-// For Of Loop //
+// For...Of Loop //
 
-const seatingChart = [
-    ['kristen', 'Eric', 'NAanata'],
-    ['john', 'Erckson', 'doe'],
-    ['Kelly', 'Daniel', 'Fortune']
-]
+// for(let char of 'hellon world'){
+//     console.log(char);
+// }
 
-for(let row of seatingChart){
-    for(let name of row){
-    console.log(row);
-    }
+// const seatingChart = [
+//     ['kristen', 'Eric', 'NAanata'],
+//     ['john', 'Erckson', 'doe'],
+//     ['Kelly', 'Daniel', 'Fortune']
+// ]
+
+// for(let row of seatingChart){
+//     for(let name of row){
+//     console.log(name);
+//     }
+// }
+
+// For..in Loop //
+
+const testScores = {
+    joe: 80,
+    marry: 20,
+    amaka: 89,
+    joseph: 202,
+    jessica: 100,
+    james: 0,
+    jess: 100,
+    jessica: 100,
+    jess: 100,
 }
+ for(let student in testScores){  
+     console.log(`${student} scored ${testScores[student]}`);
+ }
+// for(let score of Object.keys(testScores))
+// console.log(score);
+// for(let score of Object.entries (testScores))
+// console.log(score);
+// for(let score of Object.values(testScores))
+// console.log(score);
+// let total = 0;
+// let scores = Object.values(testScores);
+// for(let score of scores){
+//     total += score;
+// }
+// console.log(total / scores.length);
+
+
+
