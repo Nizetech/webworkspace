@@ -23,11 +23,46 @@
 // }
 // hello('Tammy', 'Sufars');
 
-function repeat(str, num){
-    let result = '';
-    for(let i = 0; i <num; i++){
-        result += str;
-    }
-    console.log(result);
+// function repeat(str, num){
+//     let result = '';
+//     for(let i = 0; i <num; i++){
+//         result += str;
+//     }
+//     console.log(result);
+// }
+// repeat('Tammy ', 3);
+
+// Return Keyword //
+
+function add(x, y){
+    let sum = x + y;
+    return sum;
 }
-repeat('Tammy ', 3);
+add(1, 2);
+
+ // OR //
+ function add(x, y){
+     if (typeof x !== 'number' || typeof y !== 'number'){
+         return 'ERROR';
+     }
+    return x + y; 
+}
+add(1, 2);
+
+function isWeatherLong(temperature){
+if( temperature >= 75){
+    return 'Wear shorts';
+} else{
+    return 'Wear long pants';
+}
+}
+isWeatherLong(80);
+
+function LastElement([ ]){
+    if( array.length === 0){
+        return null;
+    }else{
+        return array[array.length];
+    }
+}
+LastElement([1, 2, 3, 4, 5]);

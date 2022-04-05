@@ -140,18 +140,18 @@ const testScores = {
  for(let student in testScores){  
      console.log(`${student} scored ${testScores[student]}`);
  }
-// for(let score of Object.keys(testScores))
-// console.log(score);
-// for(let score of Object.entries (testScores))
-// console.log(score);
-// for(let score of Object.values(testScores))
-// console.log(score);
-// let total = 0;
-// let scores = Object.values(testScores);
-// for(let score of scores){
-//     total += score;
-// }
-// console.log(total / scores.length);
+for(let score of Object.keys(testScores))
+console.log(score);
+for(let score of Object.entries (testScores))
+console.log(score);
+for(let score of Object.values(testScores))
+console.log(score);
+let total = 0;
+let scores = Object.values(testScores);
+for(let score of scores){
+    total += score;
+}
+console.log(total / scores.length);
 
 
 
