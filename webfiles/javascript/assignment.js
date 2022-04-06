@@ -91,5 +91,88 @@ console.log(airplaneSeats);
 
 // Object literals
 
+let product = {
+    name: 'shoes',
+    instock: true,
+    price: 1.99,
+    flavor: ['sneakers', 'sandals', 'flip flops'],
+}
+console.log(product);
+console.log(product.name);
 
+// anonimous object
+
+const restaurant = {
+    name: 'Ichiran Ramen',
+    address: `${Math.floor(Math.random() * 100) + 1} Uniben Gate`,
+    city: 'Brooklyn',
+    state: 'NY',
+    zipcode: '11206',
+}
+
+const fullAddress = `${restaurant.address}, ${restaurant.city}, ${restaurant.state} ${restaurant.zipcode}`;
+console.log(fullAddress);
+
+
+// for loop
+
+let chorus = 'Da ba dee da ba dum';
+for(let i = 1; i  <= 6; i++){
+    console.log(chorus);
+}
+
+// another for loop
+let people = ['John', 'Sally', 'Sue', 'Bob', 'Mary'];
+for(let list of people){
+    // for(let name of list){
+        console.log(list);
+    }
+// }
+// for(i = 0; i < people.lengnth; i++){
+//     consologe.log(people[i]);
+// }
+// console.log(i,people[i]);
+
+for(i = 0; i <= 10; i++){
+    console.log(i);
+}
+for(i = 1; i < 100; i*=3){
+console.log(i);
+}
+
+// for...of Loop
+const seatingChart = [
+    ['kristen', 'Eric', 'NAanata'],
+    ['john', 'Erckson', 'doe'],
+    ['Kelly', 'Daniel', 'Fortune']
+]
+
+for(let row of seatingChart){
+    for(let name of row){
+    console.log(name);
+    }
+}
+
+const numbers = [1,2,3,4,5,6,7,8,9];
+
+for(let num of numbers){
+    console.log(num * num);
+}
+for(let num of numbers){
+    console.log(num + num);
+}
+
+// Higher OrderFunction //
+
+function square(num){
+    const result = num * num;
+       console.log(result);
+ }
+   square(5);
+
+   function root(num){
+       const result = Math.pow(num,2);
+          console.log(result);
+    }
+      root(5);
 
