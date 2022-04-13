@@ -250,3 +250,122 @@ const Square = {
 }
 console.log(Square.area(10));
 console.log(Square.perimeter(10));
+
+// try/Catch method //
+
+try {
+    hello.toUpperCase();
+} catch {
+    console.log('ERROR!!!');
+}
+console.log('Program continues...');
+
+function yell(msg){
+    try{
+        console.log(msg.toUpperCase().repeat(3));
+    }catch (e){
+        console.log(' Please pass a string next time!!!');
+    }
+}
+yell(333);
+
+const hen = {
+ name: 'Helen',
+ eggCount: Math.floor(Math.random() *9) + 1,
+    layEgg(){
+        this.eggCount++; console.log(`${this.name} has laid ${this.eggCount} eggs today!!`);
+}};
+hen.layEgg();
+console.log(hen.name);
+
+// ForEach //
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20] ;
+
+numbers.forEach(function (num){
+    if(num % 2 === 0){
+    console.log(num);
+    }
+})
+
+// Indstead of for of //
+ 
+// for(let el of numbers){
+//     if(el % 2 === 0){
+//         console.log(el);
+//     }
+// }
+
+// Map //
+const numbers1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20] ;
+
+const double = numbers1.map(function(num){
+    return num * 2;
+});
+console.log(double);
+
+const movies = [
+    {
+        title: 'The Godfather',
+        score: 99,
+    },
+    {
+        title: 'The Dark Knight',
+        score: 98,
+    },
+    {
+        title: 'The Godfather',
+        score: 50,
+    },
+    {
+        title: 'The Godfather',
+        score: 100,
+    },
+    {
+        title: 'The Godfather',
+        score: 69, 
+    }
+];
+
+movies.forEach(function(movie){
+    console.log(movie)
+}
+)
+movies.forEach(function(movie){
+    console.log(` The title is ${movie.title}: Rate ${movie.score}`);
+})
+
+// Map //
+
+const titles = movies.map(function(movie){ 
+ return movie.title.toUpperCase();
+});
+console.log(titles);
+const rate = movies.map(function(movie){
+ return movie.score}
+ );                             
+console.log(rate);
+
+// Arrow Function //
+
+const newMovies  = movies.map(movie =>(
+    `The title is ${movie.title}: Rates ${movie.score}`
+))
+console.log(newMovies);
+
+// SetTimeOut //
+
+console.log('Hello!!!')
+setTimeout(()   => {
+    console.log('Goodbye!!!')
+},2000);
+console.log('Program continues...');
+
+// Set interval //
+ const id = setInterval(() => {
+    console.log('Hello!!!')
+},2000);
+// clearInterval(id);
+
+
+

@@ -176,3 +176,11 @@ function square(num){
     }
       root(5);
 
+    // try/Catch method //
+    const hen = {
+        name: 'Helen',
+        eggCount: Math.floor(Math.random() *9) + 1,
+           layEgg(){
+               this.eggCount++; console.log(`${this.name} has laid ${this.eggCount} eggs`);
+       }};
+       hen.layEgg();
