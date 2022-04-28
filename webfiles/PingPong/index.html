@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Score Keeping</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+    <style>
+        .winner {
+            color: green,
+        }
+        
+        .loser {
+            color: red,
+        }
+    </style>
+
+    <!-- <link rel="stylesheet" href="app.css"> -->
+</head>
+
+<body>
+    <div class="container">
+        <div class="column">
+            <div class="column is-half is-offset-one-quarter">
+                <div class="card">
+                    <header class="card-header">
+                        <p class="card-header-title">
+                            Ping Pong Score Keeper
+                        </p>
+
+
+                    </header>
+                    <div class="card-content">
+                        <div class="content">
+                            <h1 class="title is-1">
+                                <span id="p1Display">
+                                    0
+                                </span> to
+                                <span id="p2Display">0</span>
+                            </h1>
+                            <p class="subtitle">
+                                use the buttons below to keep score</p>
+
+                        </div>
+                    </div>
+                    <footer class="card-footer">
+                        <a href="#" class="card-footer-item">Save</a>
+                        <a href="#" class="card-footer-item">Edit</a>
+                        <a href="#" class="card-footer-item">Delete</a>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <select name="id" id="playto">
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+    </select>
+    <button id="reset">Reset</button>
+    <button id="p1Button"> Player One</button>
+    <button id="p2Button"> Player Two</button>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
+<!--  -->
