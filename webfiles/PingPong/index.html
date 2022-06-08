@@ -6,16 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Score Keeping</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
-    <style>
-        .winner {
-            color: green,
-        }
-        
-        .loser {
-            color: red,
-        }
-    </style>
-
     <!-- <link rel="stylesheet" href="app.css"> -->
 </head>
 
@@ -24,12 +14,15 @@
         <div class="column">
             <div class="column is-half is-offset-one-quarter">
                 <div class="card">
+                    <div class="image is-2by1">
+                        <figure class="image is-2by1">
+                            <img src="https://picsum.photos/seed/picsum/100/100" alt="">
+                        </figure>
+                    </div>
                     <header class="card-header">
                         <p class="card-header-title">
                             Ping Pong Score Keeper
                         </p>
-
-
                     </header>
                     <div class="card-content">
                         <div class="content">
@@ -41,13 +34,27 @@
                             </h1>
                             <p class="subtitle">
                                 use the buttons below to keep score</p>
-
+                            <label for="playto" class="label is-large is-inline"> Playing to</label>
+                            <div class="select is-rounded">
+                                <select name="id" id="playto">
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    </select>
+                            </div>
                         </div>
                     </div>
                     <footer class="card-footer">
-                        <a href="#" class="card-footer-item">Save</a>
+                        <button id="p1Button" class="is-primary button card-footer-item">+1 Player one</button>
+                        <button id="p2Button" class="is-info button card-footer-item"> +1 Player Two </button>
+                        <button id="reset" class="is-danger button card-footer-item">Reset</button>
+
+                        <!-- <a href="#" class="card-footer-item">Save</a>
                         <a href="#" class="card-footer-item">Edit</a>
-                        <a href="#" class="card-footer-item">Delete</a>
+                        <a href="#" class="card-footer-item">Delete</a> -->
                     </footer>
                 </div>
             </div>
@@ -55,17 +62,8 @@
     </div>
 
 
-    <select name="id" id="playto">
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-    </select>
-    <button id="reset">Reset</button>
-    <button id="p1Button"> Player One</button>
-    <button id="p2Button"> Player Two</button>
+
+
 
     <script src="app.js"></script>
 </body>
