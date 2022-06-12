@@ -1,7 +1,9 @@
 const express = require('express');
+const res = require('express/lib/response');
 const app = express();
 const path = require('path');
 const { v4: uuid } = require('uuid');
+// const { v4: uuidv4 } = require('uuid');
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json())
@@ -56,6 +58,13 @@ app.get('/comments/:id', (req, res) => {
     const { id } = req.params;
     const comment = comments.find(c => c.id === id);
     res.render('comments/show', { comment })
+})
+
+app.patch('/comments/:id', (req, res) => {
+    const { id } = req.params;
+    const newCommentText = req.body.comment;
+    const foundcomment = comments.find(c => c.id === id);
+    foundcomment.comment = newCommentText;
 })
 
 // app.set('views', path.join(__dirname, '/views'));
