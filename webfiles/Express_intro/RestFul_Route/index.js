@@ -2,7 +2,8 @@ const express = require('express');
 const res = require('express/lib/response');
 const app = express();
 const path = require('path');
-const { v4: uuid } = require('uuid');
+const methodOverride = require('method-override');
+// const { v4: uuid } = require('uuid');
 // const { v4: uuidv4 } = require('uuid');
 
 app.use(express.urlencoded({ extended: true }));
@@ -10,32 +11,34 @@ app.use(express.json())
 app.set('view engine', 'ejs');
 
 const comments = [{
-        id: uuid(),
+        // id: uuid(),
+
+        id: 1,
         name: 'John',
         comment: 'This is a funny'
     },
     {
-        id: uuid(),
+        id: 2,
         name: 'Rubby',
         comment: 'I like to go to filmhouse with my girlfriend'
     },
     {
-        id: uuid(),
+        id: 3,
         name: 'Skylwalker',
         comment: 'Plz delete your account now'
     },
     {
-        id: uuid(),
+        id: 4,
         name: 'Sarah',
         comment: 'We would really miss you when you are gone'
     },
     {
-        id: uuid(),
+        id: 5,
         name: 'Destiny',
         comment: 'My real nigga i would miss ou too and your vibes on line for girls'
     },
     {
-        id: uuid(),
+        id: 6,
         name: 'Kelvin',
         comment: 'Your are a very lively person to have around and keeping the environment condusive enough'
     },
@@ -50,27 +53,39 @@ app.get('/comments/new', (req, res) => {
 
 app.post('/comments', (req, res) => {
     const { name, comment } = req.body;
-    comments.push({ name, comment, id: uuid() })
+    comments.push({
+        name,
+        comment,
+        //  id: uuid() 
+        id: comments.length + 1
+    })
     res.redirect('/comments');
 })
 
 app.get('/comments/:id', (req, res) => {
     const { id } = req.params;
-    const comment = comments.find(c => c.id === id);
+    const comment = comments.find(c => c.id === parseInt(id));
     res.render('comments/show', { comment })
+})
+app.get('/comments/:id/edit', (req, res) => {
+    const { id } = req.params;
+    const comment = comments.find(c => c.id === parseInt(id));
+    res.render('comments/edit', { comment })
 })
 
 app.patch('/comments/:id', (req, res) => {
     const { id } = req.params;
     const newCommentText = req.body.comment;
-    const foundcomment = comments.find(c => c.id === id);
+    const foundcomment = comments.find(c => c.id === parseInt(id));
     foundcomment.comment = newCommentText;
+    res.redirect('/comments');
 })
 
 // app.set('views', path.join(__dirname, '/views'));
 // app.get('/tacos', (req, res) => {
 //     res.send('Get /tacos response');
-// })
+// })  
+
 
 // app.post('/tacos', (req, res) => {
 //     const { meat, qty } = req.body;
