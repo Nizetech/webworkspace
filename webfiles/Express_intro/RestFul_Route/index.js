@@ -2,7 +2,7 @@ const express = require('express');
 const res = require('express/lib/response');
 const app = express();
 const path = require('path');
-const methodOverride = require('method-override');
+// const methodOverride = require('method-override');
 // const { v4: uuid } = require('uuid');
 // const { v4: uuidv4 } = require('uuid');
 
@@ -10,7 +10,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json())
 app.set('view engine', 'ejs');
 
-const comments = [{
+let comments = [{
         // id: uuid(),
 
         id: 1,
@@ -71,6 +71,14 @@ app.get('/comments/:id/edit', (req, res) => {
     const { id } = req.params;
     const comment = comments.find(c => c.id === parseInt(id));
     res.render('comments/edit', { comment })
+})
+
+app.delete('/comment/:id', (req, res) => {
+    const { id } = req.params;
+    // const comment = comments.find(c => c.id === parseInt(id));
+    comments = comments.filter(c => c.id !== parseInt(id));
+    // comments.splice(comments.indexOf(comment), 1);
+    res.redirect('/comments');
 })
 
 app.patch('/comments/:id', (req, res) => {
