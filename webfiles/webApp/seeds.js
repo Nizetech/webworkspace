@@ -24,27 +24,27 @@ async function main() {
 const seedProducts = [{
         name: 'Ruby Grapefruit',
         price: 1.88,
-        category: 'fruits'
+        category: 'fruit'
     },
     {
         name: 'Organic Apple',
         price: 6.88,
-        category: 'fruits'
+        category: 'fruit'
     },
     {
         name: 'Melloni',
         price: 3.88,
-        category: 'fruits'
+        category: 'fruit'
     },
     {
-        name: 'pear drink',
+        name: 'pear fruit',
         price: 9.88,
-        category: 'fruits'
+        category: 'fruit'
     },
     {
         name: 'mango juice ',
         price: 7.0,
-        category: 'fruits'
+        category: 'fruit'
     }
 ]
 

@@ -8,13 +8,13 @@ const productSchema = new mogoose.Schema({
     },
     price: {
         type: Number,
-        required: true.valueOf,
+        required: true,
         min: 0
     },
     category: {
         type: String,
         lowercase: true,
-        enum: ['fruit', 'vegetable', 'meat', 'dairy'],
+        enum: ['fruit', 'vegetable', 'meat', 'dairy', 'drinks'],
     }
 
 })
